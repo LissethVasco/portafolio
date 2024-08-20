@@ -1,0 +1,145 @@
+
+/*origuen de las fuentes google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario:#021526;
+    --color-fuente:#f6f6f6;
+    --color-secundario:#6EACDA;
+    --color-hover:#E2E2B6;
+    
+    --fuente-p:"Montserrat",sans-serif;
+    --fuente-h1:"Krona One", sans-serif;
+
+}
+
+
+* {/*reiniciar parametros para uso en todos los navegaodores */
+    padding: 0;
+    margin:0;
+}
+
+
+body{
+    /*height: 100vh; /*hacer uso del 100 % del espacio*/
+    box-sizing: border-box;/*No permite el padding se salga del tamaño establecido en el box*/
+    background-color: var(--color-primario);/*color del fondo*/
+    color: var(--color-fuente);/*color de la fuente del body*/
+}
+
+.header{
+    padding: 5% 0% 0% 10%;
+}
+
+.header_menu{
+    display: flex;
+    gap:80px ;
+    
+}
+
+.header_menu_link{
+    font-family: var(--fuente-p);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+
+.titulo-destaque {
+    color:var(--color-secundario); /*color de la fuente de la clase*/
+}
+
+.presentacion {
+    padding:5% 10%;/* tamaño de margenes del elemento de arriba y abajo primer valor y segundo valor de izquiera y derecha */
+    display: flex; /*me permite mover las cajas en el eje X,Y*/
+    align-items: center;/*alinear elementos */
+    justify-content: space-between;/*propiedad para distribuir los elementos de contenido*/
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;/* anchos en pixelex*/
+    display: flex;/*me permite mover las cajas en el eje X,Y*/
+    flex-direction: column;/*orientación de los elementos*/
+    gap: 40px;/*espaciado entre box*/
+    
+}
+
+.Presentacion_contenido_titulo{
+    font-size: 2.25rem;/*tamaño de la letra */
+     font-family: var(--fuente-h1);/*tipo de letra*/
+}
+
+.Presentacion_contenido_parrafo{
+    font-size: 1.5rem;/*tamño de letra*/
+    font-family: var(--fuente-p);/*tipo de letra*/
+}
+
+.presentacion_enlaces{
+    display: flex;/*me permite mover las cajas en el eje X,Y*/
+    justify-content: space-between;/*propiedad para distribuir los elementos de contenido*/
+    flex-direction: column;
+    align-items: center;/*nos e cunsa justify por que estan ene el ejee vertical */
+    gap: 32px;
+}
+
+.presentacion_enlaces_subtitulo{
+    font-family: var(--fuente-h1);
+    font-weight: 400;
+}
+
+.presentacion_enlaces_link{
+    width: 50%;
+    text-align: center;/*alinear texto*/
+    padding: 21.5px 0;/*espacios entre el texto y el borde valor 1 arriba y abajo, valor 2 izquierda y derecha*/
+    border-radius: 8px;/*dar cutva a los bordes*/
+    font-family: var(--fuente-p);/*tipo de letra */
+    font-size: 1.5rem;/*tamaño de la letra */
+    font-weight: 600;/*estilo tipo de letra */
+    text-decoration: none;/*agragar o eliminar decoraciones*/
+    color: var(--color-fuente) ;/*color de la fuente*/
+    border: 2px solid var(--color-secundario);
+    display: flex;
+    justify-content: center;/*no se usa aling por que estan en el eje horizontal*/
+    gap: 10px;
+}
+
+.presentacion_enlaces_link:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+
+.footer{
+    background-color: var(--color-secundario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-p);/*tipo de letra*/
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media(max-width:1200px){
+
+    .header{
+        padding:10%;
+     }
+
+.header_menu{
+    justify-content: center;
+}
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+}
